@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>StudyConnect Presentation</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+     <style>
+         body {
+             font-family: 'Inter', sans-serif;
+             background-color: #f0f4f8; /* Light background */
+             color: #333;
+             overflow-x: hidden; /* Prevent horizontal scrolling */
+         }
+         .slide {
+             min-height: 100vh;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             padding: 4rem 2rem;
+             text-align: center;
+             background-color: #ffffff;
+             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+             margin-bottom: 2rem;
+             border-radius: 1.5rem; /* More rounded corners */
+             transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+             opacity: 0;
+             transform: translateY(20px);
+         }
+         .slide.active {
+             opacity: 1;
+             transform: translateY(0);
+         }
+         .slide-title {
+             font-size: 3.5rem;
+             font-weight: 700;
+             color: #1a202c; /* Darker title color */
+             margin-bottom: 2rem;
+             line-height: 1.2;
+         }
+         .slide-subtitle {
+             font-size: 1.8rem;
+             font-weight: 600;
+             color: #4a5568;
+             margin-bottom: 1.5rem;
+         }
+         .slide-content {
+             font-size: 1.2rem;
+             line-height: 1.8;
+             color: #4a5568;
+             max-width: 800px;
+             margin: 0 auto;
+         }
+         .icon {
+             font-size: 4rem;
+             margin-bottom: 1.5rem;
+             color: #4299e1; /* Blue for icons */
+         }
+         .grid-container {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+             gap: 2rem;
+             width: 100%;
+             max-width: 1000px;
+             margin-top: 2rem;
+         }
+         .grid-item {
+             background-color: #f7fafc;
+             padding: 1.5rem;
+             border-radius: 1rem;
+             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+             text-align: left;
+             transition: transform 0.3s ease;
+         }
+         .grid-item:hover {
+             transform: translateY(-5px);
+         }
+         .grid-item h3 {
+             font-size: 1.5rem;
+             font-weight: 600;
+             color: #2d3748;
+             margin-bottom: 0.75rem;
+         }
+         .grid-item p {
+             font-size: 1rem;
+             color: #718096;
+             line-height: 1.6;
+         }
+         .team-member {
+             display: flex;
+             align-items: center;
+             margin-bottom: 1rem;
+             background-color: #f0f4f8;
+             padding: 1rem 1.5rem;
+             border-radius: 1rem;
+             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+             width: 100%;
+             max-width: 600px;
+         }
+         .team-member-icon {
+             font-size: 2.5rem;
+             margin-right: 1rem;
+             color: #38b2ac; /* Teal for team icons */
+         }
+         .team-member-details {
+             text-align: left;
+         }
+         .team-member-details h3 {
+             font-size: 1.3rem;
+             font-weight: 600;
+             color: #2d3748;
+         }
+         .team-member-details p {
+             font-size: 0.95rem;
+             color: #718096;
+         }
+         .case-study-item {
+             background-color: #f7fafc;
+             padding: 1.5rem;
+             border-radius: 1rem;
+             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+             text-align: left;
+             transition: transform 0.3s ease;
+         }
+         .case-study-item:hover {
+             transform: translateY(-5px);
+         }
+         .case-study-item h3 {
+             font-size: 1.4rem;
+             font-weight: 600;
+             color: #2d3748;
+             margin-bottom: 0.75rem;
+         }
+         .case-study-item p {
+             font-size: 1rem;
+             color: #718096;
+             line-height: 1.6;
+         }
+         .case-study-icon {
+             font-size: 3rem;
+             margin-bottom: 1rem;
+             color: #ed8936; /* Orange for case study icons */
+         }
+         .tech-icon {
+             font-size: 3.5rem;
+             margin-bottom: 0.5rem;
+             color: #4299e1;
+         }
+         .tech-item {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             text-align: center;
+             padding: 1rem;
+             border-radius: 0.75rem;
+             background-color: #edf2f7;
+             transition: transform 0.3s ease;
+         }
+         .tech-item:hover {
+             transform: translateY(-5px);
+         }
+     </style>
+ </head>
+ <body>
+
+     <section id="slide1" class="slide">
+         <div class="icon">🚀</div>
+         <h1 class="slide-title">StudyConnect</h1>
+         <p class="slide-subtitle">A Smart Platform for Connected Learning</p>
+         <div class="mt-8 flex flex-col items-center space-y-4">
+             <h2 class="text-2xl font-semibold text-gray-700">Team Sentinel</h2>
+             <div class="team-member">
+                 <span class="team-member-icon">👨‍💻</span>
+                 <div class="team-member-details">
+                     <h3>Laxman Poudel</h3>
+                     <p>Role: Backend & AI Development</p>
+                     <p>Software Developer at OptimTech Pvt. Ltd.</p>
+                     <p>BSc CSIT, 7th Semester – Butwal Multiple Campus</p>
+                 </div>
+             </div>
+             <div class="team-member">
+                 <span class="team-member-icon">🎨</span>
+                 <div class="team-member-details">
+                     <h3>Prakash Banjade</h3>
+                     <p>Role: Frontend & UI/UX Design</p>
+                     <p>Developer at ATR</p>
+                     <p>BSc CSIT, 7th Semester – Butwal Multiple Campus</p>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+     <section id="slide2" class="slide">
+         <div class="icon">🤔</div>
+         <h2 class="slide-title">The Real-World Problem</h2>
+         <p class="slide-content">
+             Students face difficulties in finding relevant study groups or qualified tutors that match their subject needs, learning goals, and availability. Existing platforms only offer basic search and filter options, lacking personalization, intelligence, and local relevance.
+         </p>
+         <h3 class="slide-subtitle mt-8">Limitations in Current Solutions</h3>
+         <div class="grid-container">
+             <div class="grid-item">
+                 <h3>No Effective Matching</h3>
+                 <p>No effective way to match students with others nearby who share the same academic interests or learning pace.</p>
+             </div>
+             <div class="grid-item">
+                 <h3>Difficult to find peer with similar interests and learning goals</h3>
+                 <p></p>
+             </div>
+             <div class="grid-item">
+                 <h3>Lack of Quality Metrics</h3>
+                 <p>Tutors are often listed without quality metrics based on real student feedback.</p>
+             </div>
+             <div class="grid-item">
+                 <h3>Manual Coordination</h3>
+                 <p>Manual coordination wastes time and lowers learning engagement.</p>
+             </div>
+         </div>
+     </section>
+
+     <section id="slide3" class="slide">
+         <div class="icon">💡</div>
+         <h2 class="slide-title">Our Proposed Solution</h2>
+         <p class="slide-content">
+             StudyConnect is a smart web platform that helps students easily find peers and join study groups or connect with tutors based on their subject interests, availability, and learning preferences — both online and locally.
+         </p>
+         <div class="mt-8 flex flex-wrap justify-center gap-8">
+             <div class="flex flex-col items-center">
+                 <span class="icon text-6xl">🧑‍🎓</span>
+                 <p class="text-xl font-medium text-gray-700">Students</p>
+             </div>
+             <div class="flex flex-col items-center">
+                 <span class="icon text-6xl">🤝</span>
+                 <p class="text-xl font-medium text-gray-700">Peers</p>
+             </div>
+             <div class="flex flex-col items-center">
+                 <span class="icon text-6xl">📚</span>
+                 <p class="text-xl font-medium text-gray-700">Study Groups</p>
+             </div>
+             <div class="flex flex-col items-center">
+                 <span class="icon text-6xl">👨‍🏫</span>
+                 <p class="text-xl font-medium text-gray-700">Tutors</p>
+             </div>
+         </div>
+     </section>
+
+     <section id="slide4" class="slide">
+         <div class="icon">⚙️</div>
+         <h2 class="slide-title">How It Works</h2>
+         <div class="grid-container">
+             <div class="grid-item">
+                 <span class="text-4xl mb-2 block">📝</span>
+                 <h3>User Profiles & Learning Goals</h3>
+                 <p>Students and tutors sign up, specifying subjects, topics, availability, and preferences (online/in-person).</p>
+             </div>
+             <div class="grid-item">
+                 <span class="text-4xl mb-2 block">🧠</span>
+                 <h3>Intelligent Recommendations</h3>
+                 <p>Machine learning models analyze user profiles, past activity, and peer data to suggest ideal study groups or tutors or peers.</p>
+             </div>
+             <div class="grid-item">
+                 <span class="text-4xl mb-2 block">🔗</span>
+                 <h3>Smart Matching Engine</h3>
+                 <p>Clustering algorithm groups users by location + interest. Predictive scoring ranks tutors based on student feedback and engagement data.</p>
+             </div>
+             <div class="grid-item">
+                 <span class="text-4xl mb-2 block">💬</span>
+                 <h3>Integrated Chat System</h3>
+                 <p>Students and tutors can communicate directly via in-platform chat, share resources, and confirm sessions.</p>
+             </div>
+         </div>
+     </section>
+
+     <section id="slide5" class="slide">
+         <div class="icon">✨</div>
+         <h2 class="slide-title">What Makes It Unique</h2>
+         <div class="grid-container">
+             <div class="grid-item">
+                 <span class="text-4xl mb-2 block">📍📚</span>
+                 <h3>Location & Subject Clustering</h3>
+                 <p>Automatically groups learners who are nearby and studying the same topics.</p>
+             </div>
+             <div class="grid-item">
+                 <span class="text-4xl mb-2 block">🤖💡</span>
+                 <h3>AI-Powered Recommendations</h3>
+                 <p>Personalized matches based on behavior, feedback, and performance history.</p>
+             </div>
+             <div class="grid-item">
+                 <span class="text-4xl mb-2 block">⭐📊</span>
+                 <h3>Tutor Quality Prediction</h3>
+                 <p>Uses a feedback loop and reputation model to rank tutor reliability and effectiveness.</p>
+             </div>
+             <div class="grid-item">
+                 <span class="text-4xl mb-2 block">🤝🧠</span>
+                 <h3>Group Intelligence</h3>
+                 <p>Helps form or join study groups with aligned goals and encourages collaborative learning.</p>
+             </div>
+         </div>
+     </section>
+
+     <section id="slide6" class="slide">
+         <div class="icon">💻</div>
+         <h2 class="slide-title">Technologies & Platforms</h2>
+         <div class="grid-container">
+             <div class="tech-item">
+                 <span class="tech-icon">⚛️</span>
+                 <h3>Frontend</h3>
+                 <p>React.js + Tailwind CSS</p>
+             </div>
+             <div class="tech-item">
+                 <span class="tech-icon">🟢</span>
+                 <h3>Backend</h3>
+                 <p>Node.js with Express</p>
+             </div>
+             <div class="tech-item">
+                 <span class="tech-icon">🍃</span>
+                 <h3>Database</h3>
+                 <p>MongoDB (NoSQL)</p>
+             </div>
+             <div class="tech-item">
+                 <span class="tech-icon">🔑</span>
+                 <h3>Authentication</h3>
+                 <p>JWT-based custom login</p>
+             </div>
+             <div class="tech-item">
+                 <span class="tech-icon">💬</span>
+                 <h3>Real-time Chat</h3>
+                 <p>Socket.IO</p>
+             </div>
+             <div class="tech-item">
+                 <span class="tech-icon">🐍🤖</span>
+                 <h3>Machine Learning</h3>
+                 <p>Python (scikit-learn / TensorFlow)</p>
+             </div>
+             <div class="tech-item">
+                 <span class="tech-icon">🌐</span>
+                 <h3>Deployment</h3>
+                 <p>Vercel (frontend), Render (backend + ML models)</p>
+             </div>
+         </div>
+     </section>
+
+     <section id="slide7" class="slide">
+         <div class="icon">🏗️</div>
+         <h2 class="slide-title">System Architecture</h2>
+         <div class="grid-container">
+             <div class="grid-item">
+                 <span class="text-4xl mb-2 block">👤</span>
+                 <h3>User Onboarding & Profile Setup</h3>
+                 <p>Students and tutors input skills, goals, preferences.</p>
+             </div>
+             <div class="grid-item">
+                 <span class="text-4xl mb-2 block">📊</span>
+                 <h3>Data Aggregation & Matching Engine</h3>
+                 <p>Uses clustering (e.g., K-means) to group users by location + subject. Recommendation model trained on feedback, session success rate, and history.</p>
+             </div>
+             <div class="grid-item">
+                 <span class="text-4xl mb-2 block">🔍</span>
+                 <h3>Discovery & Management</h3>
+                 <p>Group creation. Students can request to join study groups or find similar interested peers or book tutors directly.</p>
+             </div>
+             <div class="grid-item">
+                 <span class="text-4xl mb-2 block">🔔</span>
+                 <h3>Chat & Notification System</h3>
+                 <p>In-app chat built with Socket.IO. Instant alerts for session invites, approvals.</p>
+             </div>
+         </div>
+     </section>
+
+     <section id="slide8" class="slide">
+         <div class="icon">🌟</div>
+         <h2 class="slide-title">Standout Features</h2>
+         <ul class="list-disc list-inside text-left text-xl space-y-3 max-w-2xl mx-auto">
+             <li><span class="font-semibold text-blue-600">AI-Driven Tutor, Peer & Group Recommendations</span></li>
+             <li><span class="font-semibold text-blue-600">Clustering Algorithm</span> for smart matchmaking</li>
+             <li><span class="font-semibold text-blue-600">Feedback-Based Tutor Scoring</span></li>
+             <li><span class="font-semibold text-blue-600">Real-time Group Chat & Request Handling</span></li>
+         </ul>
+     </section>
+
+     <section id="slide9" class="slide">
+         <div class="icon">🎯</div>
+         <h2 class="slide-title">Impact & Use Case</h2>
+         <h3 class="slide-subtitle">Who Will Benefit</h3>
+         <ul class="list-disc list-inside text-left text-xl space-y-2 max-w-2xl mx-auto">
+             <li><span class="font-semibold text-green-600">Students</span> – looking for personalized, local or online tutors and study groups, peers tailored to their needs.</li>
+             <li><span class="font-semibold text-green-600">Tutors</span> – wanting to connect with motivated learners nearby or remotely.</li>
+         </ul>
+
+         <h3 class="slide-subtitle mt-8">Real-Life Use Cases</h3>
+         <div class="grid-container">
+             <div class="case-study-item">
+                 <span class="case-study-icon">👩‍🎓</span>
+                 <h3>Rita's Data Structures Help</h3>
+                 <p>Rita, a BSc CSIT student, struggles with Data Structures. She logs into StudyConnect and gets matched with a tutor highly rated for DSA and Java—Books a session and schedules a zoom meeting (online) or in-person (offline).</p>
+             </div>
+             <div class="case-study-item">
+                 <span class="case-study-icon">👨‍💻</span>
+                 <h3>Suman's Interview Prep</h3>
+                 <p>Suman, preparing for job interviews, joins a local Algorithm Study Group near Butwal. He practices weekly with peers through group chats and coding sessions.</p>
+             </div>
+             <div class="case-study-item">
+                 <span class="case-study-icon">👭</span>
+                 <h3>Anjali Finds Her Peers</h3>
+                 <p>Anjali, new to college, struggles to find like-minded learners. StudyConnect matches her with another beginner in Python from her locality.</p>
+             </div>
+         </div>
+     </section>
+
+     <section id="slide10" class="slide">
+         <div class="icon">🗓️</div>
+         <h2 class="slide-title">Feasibility & Future Plan</h2>
+         <h3 class="slide-subtitle">Feasibility (2-Day Hackathon MVP)</h3>
+         <ul class="list-disc list-inside text-left text-xl space-y-2 max-w-2xl mx-auto">
+             <li>Prioritize: Study group, tutors and students creation interface.</li>
+             <li>Smart matching logic (rule-based initially).</li>
+             <li>Basic chat and request workflow.</li>
+             <li>Simulate intelligent recommendations with user preferences and filters — keeping it lightweight and practical for demo purposes.</li>
+         </ul>
+
+         <h3 class="slide-subtitle mt-8">Future Plan (Post-Hackathon)</h3>
+         <ul class="list-disc list-inside text-left text-xl space-y-2 max-w-2xl mx-auto">
+             <li>Integrate actual ML models for tutor/group recommendations.</li>
+             <li>Enable learning analytics and friend matching based on interests.</li>
+             <li>Develop a mobile app version.</li>
+         </ul>
+     </section>
+
+     <section id="slide11" class="slide">
+         <div class="icon">✅</div>
+         <h2 class="slide-title">Conclusion</h2>
+         <p class="slide-content mb-8">
+             To summarize, StudyConnect is a smart platform designed to help students find the right tutors, join relevant study groups, and connect with peers who share similar learning goals. It brings intelligence, personalization, and social connection into the education space.
+         </p>
+         <p class="slide-content font-semibold text-2xl text-gray-800">
+             We are Team Sentinel — a focused, experienced, and technically capable duo. With our combined expertise in AI, backend systems, and intuitive frontend design, we're confident in our ability to deliver an impactful solution within the hackathon.
+         </p>
+         <p class="slide-content mt-8 text-3xl font-bold text-blue-700">
+             Select us, and we’ll build not just an app, but a foundation for smarter, more connected learning.
+         </p>
+     </section>
+
+     <script>
+         // JavaScript for simple slide animation
+         document.addEventListener('DOMContentLoaded', () => {
+             const slides = document.querySelectorAll('.slide');
+             const observerOptions = {
+                 root: null,
+                 rootMargin: '0px',
+                 threshold: 0.1 // Trigger when 10% of the slide is visible
+             };
+
+             const slideObserver = new IntersectionObserver((entries, observer) => {
+                 entries.forEach(entry => {
+                     if (entry.isIntersecting) {
+                         entry.target.classList.add('active');
+                     } else {
+                         entry.target.classList.remove('active');
+                     }
+                 });
+             }, observerOptions);
+
+             slides.forEach(slide => {
+                 slideObserver.observe(slide);
+             });
+         });
+     </script>
+ </body>
+ </html>
+ 
