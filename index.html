@@ -103,6 +103,9 @@
              font-size: 2.5rem;
              margin-right: 1rem;
              color: #38b2ac; /* Teal for team icons */
+             width: 10rem;
+             height: 10rem;
+             margin-top:1rem;
          }
          .team-member-details {
              text-align: left;
@@ -162,41 +165,60 @@
              transform: translateY(-5px);
          }
      </style>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
  </head>
  <body>
 
-     <section id="slide1" class="slide">
-         <div class="icon">🚀</div>
-         <h1 class="slide-title">StudyConnect</h1>
-         <p class="slide-subtitle">A Smart Platform for Connected Learning</p>
-         <div class="mt-8 flex flex-col items-center space-y-4">
-             <h2 class="text-2xl font-semibold text-gray-700">Team Sentinel</h2>
-             <div class="team-member">
-                 <span class="team-member-icon">👨‍💻</span>
-                 <div class="team-member-details">
-                     <h3>Laxman Poudel</h3>
-                     <p>Role: Backend & AI Development</p>
-                     <p>Software Developer at OptimTech Pvt. Ltd.</p>
-                     <p>BSc CSIT, 7th Semester – Butwal Multiple Campus</p>
-                 </div>
-             </div>
-             <div class="team-member">
-                 <span class="team-member-icon">🎨</span>
-                 <div class="team-member-details">
-                     <h3>Prakash Banjade</h3>
-                     <p>Role: Frontend & UI/UX Design</p>
-                     <p>Developer at ATR</p>
-                     <p>BSc CSIT, 7th Semester – Butwal Multiple Campus</p>
-                 </div>
-             </div>
-         </div>
-     </section>
+<section id="slide1" class="slide flex flex-col items-center justify-center min-h-screen px-6 py-12">
+    <div class="icon text-6xl">🚀</div>
+    <h1 class="slide-title text-4xl font-extrabold mt-4 text-indigo-700">StudyConnect</h1>
+    <p class="slide-subtitle text-lg text-gray-600 mt-2">A Smart Platform for Connected Learning</p>
+
+    <div class="mt-10 flex flex-col items-center space-y-8">
+      <h2 class="text-2xl font-semibold text-gray-700">Team Sentinel</h2>
+
+      <!-- Laxman Poudel -->
+      <div class="team-member flex items-start space-x-6">
+        <img
+          src="https://pics.paypal.com/00/p/NzJiY2NkOGYtYTA5Mi00ODQ4LWJmYmItYzNhOWQyYWZhOWMy/image_35.JPG"
+          alt="Laxman Poudel"
+          class="team-member-icon w-32 h-32 rounded-xl object-cover border-4 border-teal-400 shadow-lg"
+        />
+        <div class="team-member-details">
+          <h3 class="text-xl font-semibold text-gray-800 mt-3">Laxman Poudel</h3>
+          <p class="text-gray-600">Role: Backend & AI Development</p>
+          <p class="text-gray-600">Software Developer at OptimTech Pvt. Ltd.</p>
+          <p class="text-gray-600">BSc CSIT, 7th Semester – Butwal Multiple Campus</p>
+        </div>
+      </div>
+
+      <!-- Prakash Banjade -->
+      <div class="team-member flex items-start space-x-6">
+        <img
+          src="https://scontent.fdhi1-1.fna.fbcdn.net/v/t39.30808-1/471284864_2070414933391685_5157004411934670575_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeH7QLod8px65DOjWGbeLhHRoSccbEEUMJuhJxxsQRQwmwyloGq92dsihwX3TZq-sH9vNsbziI4jPEQQG8Ufv4AO&_nc_ohc=kDhRJf6NcyUQ7kNvwEIwXvy&_nc_oc=AdlSZDHwsA4Ewuv9KnjRq3fZs4WXvDJ03qTd34_8x2u3hj2TizfMwixZQWDNm54lZSSTsUepFi0eF5wO1rmUoGXa&_nc_zt=24&_nc_ht=scontent.fdhi1-1.fna&_nc_gid=TF5nZ-lA_tHnlf1kpqEnFA&oh=00_AfIBYbTXniUe9793j6KFEc6ryAPI2wZjoJBm3V2jq7FtTQ&oe=683E0F77"
+          alt="Prakash Banjade"
+          class="team-member-icon w-32 h-32 rounded-xl object-cover border-4 border-teal-400 shadow-lg"
+        />
+        <div class="team-member-details">
+          <h3 class="text-xl font-semibold text-gray-800 mt-3">Prakash Banjade</h3>
+          <p class="text-gray-600">Role: Frontend & UI/UX Design</p>
+          <p class="text-gray-600">Developer at Abhyam Robotics Institution of Business and Technology</p>
+          <p class="text-gray-600">BSc CSIT, 7th Semester – Butwal Multiple Campus</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 
      <section id="slide2" class="slide">
          <div class="icon">🤔</div>
          <h2 class="slide-title">The Real-World Problem</h2>
          <p class="slide-content">
-             Students face difficulties in finding relevant study groups or qualified tutors that match their subject needs, learning goals, and availability. Existing platforms only offer basic search and filter options, lacking personalization, intelligence, and local relevance.
+             Students face difficulties in finding relevant study groups or qualified tutors or similar peers that match their subject needs, learning goals, and availability. Existing platforms only offer basic search and filter options, lacking personalization, intelligence, and local relevance.
          </p>
          <h3 class="slide-subtitle mt-8">Limitations in Current Solutions</h3>
          <div class="grid-container">
@@ -371,11 +393,11 @@
      <section id="slide8" class="slide">
          <div class="icon">🌟</div>
          <h2 class="slide-title">Standout Features</h2>
-         <ul class="list-disc list-inside text-left text-xl space-y-3 max-w-2xl mx-auto">
+         <ul class="list-disc list-inside text-left text-xl space-y-3 max-w-3xl mx-auto">
              <li><span class="font-semibold text-blue-600">AI-Driven Tutor, Peer & Group Recommendations</span></li>
              <li><span class="font-semibold text-blue-600">Clustering Algorithm</span> for smart matchmaking</li>
              <li><span class="font-semibold text-blue-600">Feedback-Based Tutor Scoring</span></li>
-             <li><span class="font-semibold text-blue-600">Real-time Group Chat & Request Handling</span></li>
+             <li><span class="font-semibold text-blue-600">Real-time Group Chat, peer chat and chat with tutor & Request Handling</span></li>
          </ul>
      </section>
 
